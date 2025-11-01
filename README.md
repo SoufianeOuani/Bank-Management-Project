@@ -42,7 +42,7 @@ This project follows Object-Oriented Programming (OOP) principles and focuses on
 ---
 
 ## 📂 Project Structure
-
+```
 BMS/
 │
 ├── Core/
@@ -65,7 +65,7 @@ BMS/
 │
 ├── Global.h
 └── main.cpp
-
+```
 
 ---
 
@@ -127,7 +127,6 @@ Soufiane Ouani
 💡 Digital Development Student |
 📧 ouanisoufiane@gmail.com
 
-**🌐 GitHub Profile**
 
 ⭐ If you like this project, don’t forget to star it on GitHub!
 
