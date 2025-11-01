@@ -1,0 +1,87 @@
+#pragma once
+#include <iostream>
+#include <string>
+#include "InterfaceCommunication.h"
+using namespace std;
+
+class clsPerson : public InterfaceCommunication
+{
+
+private:
+	string _FirstName;
+	string _LastName;
+	string _Email;
+	string _Phone;
+
+public:
+
+	clsPerson() {}
+	clsPerson(string FirstName, string LastName, string Email, string Phone)
+	{
+		_FirstName = FirstName;
+		_LastName = LastName;
+		_Email = Email;
+		_Phone = Phone;
+	}
+
+	void setFirstName(string FirstName)
+	{
+		_FirstName = FirstName;
+	}
+	string getFirstName()
+	{
+		return _FirstName;
+	}
+	_declspec(property(get = getFirstName, put = setFirstName))string FirstName;
+
+	void setLastName(string LastName)
+	{
+		_LastName = LastName;
+	}
+	string getLastName()
+	{
+		return _LastName;
+	}
+	_declspec(property(get = getLastName, put = setLastName))string LastName;
+
+	void setEmail(string Email)
+	{
+		_Email = Email;
+	}
+	string getEmail()
+	{
+		return _Email;
+	}
+	_declspec(property(get = getEmail, put = setEmail))string Email;
+
+	void setPhone(string Phone)
+	{
+		_Phone = Phone;
+	}
+	string getPhone()
+	{
+		return _Phone;
+	}
+	_declspec(property(get = getPhone, put = setPhone))string Phone;
+
+	string FullName()
+	{
+		return _FirstName + " " + _LastName;
+	}
+
+	void Print()
+	{
+		cout << "Info: ";
+		cout << "\n________________";
+		cout << "\nFirst Name: " << _FirstName;
+		cout << "\nLast Name: " << _LastName;
+		cout << "\nFull Name: " << FullName();
+		cout << "\nEmail: " << _Email;
+		cout << "\nPhone: " << _Phone;
+		cout << "\n________________";
+	}
+
+	void SendEmail(string Title, string Body) {}
+	void SendFax(string Title, string Body) {}
+	void SendSMS(string Title, string Body) {}
+};
